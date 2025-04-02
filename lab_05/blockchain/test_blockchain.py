@@ -4,9 +4,25 @@ from blockchain import Blockchain
 my_blockchain = Blockchain()
 
 
-my_blockchain.add_transaction('Alice', 'Bob', 10)
-my_blockchain.add_transaction('Bob', 'Charlie', 5)
-my_blockchain.add_transaction('Charlie', 'Alice', 3)
+# my_blockchain.add_transaction('Alice', 'Bob', 10)
+# my_blockchain.add_transaction('Bob', 'Charlie', 5)
+# my_blockchain.add_transaction('Charlie', 'Alice', 3)
+
+
+sender_1 = input("Enter sender of transaction 1: ")
+recipient_1 = input("Enter recipient of transaction 1: ")
+amount_1 = float(input("Enter amount for transaction 1: "))
+my_blockchain.add_transaction(sender_1, recipient_1, amount_1)
+
+sender_2 = input("Enter sender of transaction 2: ")
+recipient_2 = input("Enter recipient of transaction 2: ")
+amount_2 = float(input("Enter amount for transaction 2: "))
+my_blockchain.add_transaction(sender_2, recipient_2, amount_2)
+
+sender_3 = input("Enter sender of transaction 3: ")
+recipient_3 = input("Enter recipient of transaction 3: ")
+amount_3 = float(input("Enter amount for transaction 3: "))
+my_blockchain.add_transaction(sender_3, recipient_3, amount_3)
 
 
 previous_block = my_blockchain.get_previous_block()
